@@ -1,0 +1,10 @@
+<p>
+  fourth works!
+</p>
+
+<div *ngFor="let data of posts$ | async">
+  <div>Post Id: {{data.id}}</div>
+  <div>Post Title: {{data.title}}</div>
+  <div>Post Data: {{data.body}}</div>
+  <br>
+</div>
