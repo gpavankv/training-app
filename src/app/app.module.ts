@@ -1,3 +1,5 @@
+import { Logger } from "./services/logger.service";
+import { FeatureModule } from "./feature/feature.module";
 import { HttpService } from "./services/http.service";
 import { AppRoutingModule } from './app-routing.module';
 import { BasicHighlightDirective } from './basic-highlight-directive/basic-highlight.directive';
@@ -26,10 +28,12 @@ import { DataShareService } from './services/data-share.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FeatureModule,
   ],
   providers: [
     HttpService,
     DataShareService,
+    Logger,
   ],
   bootstrap: [AppComponent]
 })
